@@ -12,5 +12,5 @@ def crop_info(request):
         obj = crop.objects.create(name=name, description=description, prize=prize, stock=stock, photo=photo)
         obj.save()
         return redirect('crop_info.html')
-    else :
-        return render(request, 'login.html')
+    else:
+        return render(request, 'add_item.html')

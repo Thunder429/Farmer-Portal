@@ -7,7 +7,7 @@ class farmer(models.Model):
     contact = models.CharField(max_length=10)
     email = models.EmailField()
     address = models.TextField(max_length=120)
-    photo = models.FileField()
+    photo = models.FileField(null=True)
     password = models.CharField(max_length=20)
 
     def __str__(self):

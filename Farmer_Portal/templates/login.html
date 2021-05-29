@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <form action="" method="POST">
+    {% csrf_token %}
     <div class="container">
         <center>
             <br><br>
@@ -19,13 +21,13 @@
             <center>
                 <br><br>
                 <div class="username">
-                    <label for="Username">Username:</label>
-                    <input type="text" id="Username" placeholder="Enter Your Username" required>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" placeholder="contact no" required>
                 </div>
                 <br>
                 <div class="password">
-                    <label for="Password">Password:</label>
-                    <input type="password" id="Password" placeholder="Enter your Password" required>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your Password" required>
                 </div>
             </center>
             <center>
@@ -44,6 +46,7 @@
             </center>
         </div>
     </div>
+    </form>
 </body>
 
 </html>

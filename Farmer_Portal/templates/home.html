@@ -4,9 +4,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Farmer's Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+}
+.nav-list{
+    width: 50%;
+    background-color:  rgba(22, 21, 21, 0.795);
+    display: flex;
+    align-items: center;
+    
+}
+.logo {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.logo img {
+    width: 30%;
+    border: 3px solid white;
+    border-radius: 50px
+}
+.nav-list li {
+   list-style: none;
+   padding: 26px 30px;
+   transition-duration: 0.4s;
+}
+
+.nav-list li a {
+   text-decoration: none;
+   color: white;
+}
+.nav-list2 {
+    list-style: none;
+    width: 50%;
+    background-color:  rgba(22, 21, 21, 0.795);
+    display:flex;
+    align-items: center;
+}
+
+.nav-list2 li{
+    text-decoration: none;
+    text-align: right;
+    padding: 10px;
+}
+#search {
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid grey;
+    border-radius: 9px;
+}
+.btn-sm {
+    padding: 5px;
+    font-size: 13px;
+    border: 2px solid grey;
+    border-radius: 9px;
+    transition-duration: 0.4s;
+}
+.login {
+    padding: 5px;
+    font-size: 13px;
+    border: 2px solid grey;
+    border-radius: 1px;
+    transition-duration: 0.4s;
+}
+.login:hover {
+    background-color: gray; /* Green */
+    color: white;
+  }
+  .btn-sm:hover {
+    background-color:gray; /* Green */
+    color: white;
+  }
+  .cart {
+    padding: 5px;
+    font-size: 13px;
+    border: 2px solid grey;
+    border-radius: 1px;
+    transition-duration: 0.4s;
+}
+.cart:hover {
+    background-color: gray; /* Green */
+    color: white;
+}
+
+.background {
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.nav-list li:hover {
+    background-color:gray; /* Green */
+    color: white;
+  }
+    </style>
 </head>
 <body>
-    Home Page
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo"><img src="static/logo.jpg" alt="logo"></div>
+            <li><a href = {% url 'home page' %}>Home</a></li>
+            <li><a href = "product">Products</a></li>
+            <li><a href = "about">About</a></li>
+            <li><a href = "services">Services</a></li>
+            <li><a href = "contact">Contact</a></li>
+        </ul>
+        <ul class="nav-list2">
+            <li><input type="text" name="search" id="search">
+                <button class ="btn btn-sm">Search</button>  
+            </li>
+            <li> <button class="login" onclick="window.location.href='http://127.0.0.1:8000/login'">Login</button></li>
+            <li> <button class="cart" onclick="window.location.href='http://127.0.0.1:8000/signup'"> Signup</button></li>
+        </ul>
+            
+    </nav>
+    
 </body>
 </html>
