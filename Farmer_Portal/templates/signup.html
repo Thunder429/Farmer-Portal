@@ -36,7 +36,7 @@
                 <label for="Email_id" class="Registrationpage">
                     Email-ID :
                 </label>
-                <input type="email" name="Email" id="Email_id" placeholder="--Enter Your Email id--" required>
+                <input type="email" name="Email" id="Email_id" placeholder="--Enter Your Email id--">
             </div>
 
             <div class="address">
@@ -47,21 +47,13 @@
                 <textarea id="Address" name="Address" cols="60" rows="10" placeholder="write your full adress here"
                     required></textarea>
             </div>
-
-            <div class="addressline2">
-                <br>
-                <label for="Address2" class="Registrationpage">
-                    Addressline2 (Format:city, State):
-                </label>
-                <input type="text" name="address2" id="Address2" placeholder="--City, State--" required>
-            </div>
-
+            
             <div class="photo">
                 <br>
                 <label for="photo" class="Registration_Page">
                     Your Photo:
                 </label>
-                <input type="image" id="photo" name="photo" placeholder="--Put your Photo here--" required>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
             </div>
 
             <div class="password">
