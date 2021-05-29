@@ -1,0 +1,39 @@
+body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-color: rgb(172, 235, 172);  
+    font-family: 'Arial';  
+}  
+.signup{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 10 0 10;  
+        padding: 80px;  
+        background: #6a8abb;  
+        border-radius: 15px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: rgb(145, 29, 223);  
+    padding: 20px;  
+}  
+label{  
+    color: rgb(0, 0, 0);  
+    font-size: 17px;  
+}  
+
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+a{  
+    float: center;  
+    background-color: grey;  
+}  
+#submit{
+    color: rgb(255, 38, 0);  
+    font-size: 17px;  
+}

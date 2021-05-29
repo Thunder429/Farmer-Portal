@@ -2,21 +2,19 @@
 <html>
 
 <head>
-    <title>Login Page</title>
-    <meta name="description" content="Farmer-login-page">
+    <title>Signup Page</title>
+    <meta name="description" content="Farmer-Signup-page">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="author" content="Hackguru">
-    <style>
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="static/signup.css">
 </head>
 
 <body>
     <div class="container">
         <form action="" class="Registration_Page"
             method="POST">
-            {% csrf_token %}
-
+            <h2>Registration Page</h2>
+        <div class="signup">
             <div class="name">
                 <label for="Name" class="Registrationpage">
                     Name :
@@ -25,14 +23,16 @@
             </div>
 
             <div class="contact">
+                <br>
                 <label for="Contactno" class="Registrationpage">
                     Contact No. :
                 </label>
-                <input type="number" name="Contactno" id="Contactno" placeholder="--Enter your Mobile No."
-                    required></textarea>
+                <input type="number" name="Contactno" id="Contactno" placeholder="--Enter your Mobile No.--"
+                    required>
             </div>
 
             <div class="email">
+                <br>
                 <label for="Email_id" class="Registrationpage">
                     Email-ID :
                 </label>
@@ -40,6 +40,7 @@
             </div>
 
             <div class="address">
+                <br>
                 <label for="Address" class="Registrationpage">
                     Address:<br> 
                 </label>
@@ -48,6 +49,7 @@
             </div>
 
             <div class="addressline2">
+                <br>
                 <label for="Address2" class="Registrationpage">
                     Addressline2 (Format:city, State):
                 </label>
@@ -55,6 +57,7 @@
             </div>
 
             <div class="photo">
+                <br>
                 <label for="photo" class="Registration_Page">
                     Your Photo:
                 </label>
@@ -62,20 +65,22 @@
             </div>
 
             <div class="password">
+                <br>
                 <label for="password" class="loginpage2">
                     Password :
                 </label>
                 <input type="password" id="password" name="password" placeholder="--Password--"
                     required>
-                <br>
+                <br><br>
                 <label for="Cpassword" class="loginpage2">
                     Confirm Password :
                 </label>
                 <input type="password" id="Cpassword" name="Cpassword" placeholder="--Password--"  oninput=" Pcheck() " required>
             </div>
-
+            <br><br>
             <center><input type="submit" value="Submit" id="submit">
             </center>
+        </div>
         </form>
     </div>
 </body>
