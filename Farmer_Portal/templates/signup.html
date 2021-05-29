@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <meta name="description" content="Farmer-login-page">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="author" content="Hackguru">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" class="Registration_Page"
+            method="POST">
+            {% csrf_token %}
+
+            <div class="name">
+                <label for="Name" class="Registrationpage">
+                    Name :
+                </label>
+                <input type="text" name="Name" id="Name" placeholder="--Enter Your Name--" required>
+            </div>
+
+            <div class="contact">
+                <label for="Contactno" class="Registrationpage">
+                    Contact No. :
+                </label>
+                <input type="number" name="Contactno" id="Contactno" placeholder="--Enter your Mobile No."
+                    required></textarea>
+            </div>
+
+            <div class="email">
+                <label for="Email_id" class="Registrationpage">
+                    Email-ID :
+                </label>
+                <input type="email" name="Email" id="Email_id" placeholder="--Enter Your Email id--" required>
+            </div>
+
+            <div class="address">
+                <label for="Address" class="Registrationpage">
+                    Address:<br> 
+                </label>
+                <textarea id="Address" name="Address" cols="60" rows="10" placeholder="write your full adress here"
+                    required></textarea>
+            </div>
+
+            <div class="addressline2">
+                <label for="Address2" class="Registrationpage">
+                    Addressline2 (Format:city, State):
+                </label>
+                <input type="text" name="address2" id="Address2" placeholder="--City, State--" required>
+            </div>
+
+            <div class="photo">
+                <label for="photo" class="Registration_Page">
+                    Your Photo:
+                </label>
+                <input type="image" id="photo" name="photo" placeholder="--Put your Photo here--" required>
+            </div>
+
+            <div class="password">
+                <label for="password" class="loginpage2">
+                    Password :
+                </label>
+                <input type="password" id="password" name="password" placeholder="--Password--"
+                    required>
+                <br>
+                <label for="Cpassword" class="loginpage2">
+                    Confirm Password :
+                </label>
+                <input type="password" id="Cpassword" name="Cpassword" placeholder="--Password--"  oninput=" Pcheck() " required>
+            </div>
+
+            <center><input type="submit" value="Submit" id="submit">
+            </center>
+        </form>
+    </div>
+</body>
+<script>
+    function Pcheck(){
+        element = document.getElementById('password').value;
+        element= element.toString();
+        if (element.length < 8) {
+            alert('Password must contain atleast 8 characters')
+            document.getElementById('password').style.borderColor='red';
+        }
+        else
+        {
+            document.getElementById('password').style.borderColor='wheat';
+        }
+
+        if(document.getElementById('password').value != document.getElementById('Cpassword').value)
+        {
+            alert("Confirm password doesn't match. Please check your Password");
+                document.getElementById('password').style.borderColor = 'red';
+                 document.getElementById('Cpassword').style.borderColor = 'red';
+                return false;
+        }
+        else{
+            document.getElementById('password').style.borderColor='wheat';
+            document.getElementById('Cpassword').style.borderColor='wheat';
+        }
+    }
+</script>
+</html>
