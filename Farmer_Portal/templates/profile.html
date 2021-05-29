@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+    <title>Profile page</title>
+    <meta name="description" content="Farmer-login-page">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="author" content="Hackguru">
+</head>
+
+<body>
+  <div class="container mt-3 p-3">
+    <div class="card mb-3 col-12 col-xl-8 mx-auto">
+      <div class="row no-gutters text-center justify-content-center">
+      <div class="col-8 col-sm-6 col-md-3 p-3">
+        <img src="https://clipground.com/images/profile-avatar-png-7.jpg" class="img-fluid rounded-circle mx-auto">
+      </div>
+      <div class="col-md-9 p-3">
+        <div class="card-body">
+          <h3 class="card-title mb-3">{{farmer.name}}</h3>
+          <p class="card-text m-0">{{farmer.email}}</p>
+          <p class="card-text">{{farmer.contact}}</p>
+          <p class="card-text"><small class="text-muted">{{farmer.address}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <h3 class="bg-primary rounded shadow-sm text-white p-4 text-center col-xl-8 mx-auto">
+      Your Listings
+    </h3>
+    <center>
+      <button type="button" class="btn btn-primary" onclick="window.location.href='http://127.0.0.1:8000/product_info'">Add new item</button>
+    </center>
+    <div>
+    {% for crop in crops %}
+    <div>
+      <li>
+        {{crop.name}} {{crop.prize}} {{crop.stock}}
+      </li>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+</body>
+</html>

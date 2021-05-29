@@ -39,7 +39,6 @@
    padding: 26px 30px;
    transition-duration: 0.4s;
 }
-
 .nav-list li a {
    text-decoration: none;
    color: white;
@@ -76,6 +75,7 @@
     border: 2px solid grey;
     border-radius: 1px;
     transition-duration: 0.4s;
+    float:right;
 }
 .login:hover {
     background-color: gray; /* Green */
@@ -113,20 +113,20 @@
         <ul class="nav-list">
             <div class="logo"><img src="static/logo.jpg" alt="logo"></div>
             <li><a href = {% url 'home page' %}>Home</a></li>
-            <li><a href = "product">Products</a></li>
-            <li><a href = "about">About</a></li>
-            <li><a href = "services">Services</a></li>
-            <li><a href = "contact">Contact</a></li>
         </ul>
         <ul class="nav-list2">
-            <li><input type="text" name="search" id="search">
-                <button class ="btn btn-sm">Search</button>  
-            </li>
             <li> <button class="login" onclick="window.location.href='http://127.0.0.1:8000/login'">Login</button></li>
             <li> <button class="cart" onclick="window.location.href='http://127.0.0.1:8000/signup'"> Signup</button></li>
         </ul>
             
     </nav>
-    
+    <img src="static/wheat.jpg" height=300cm width=400cm  alt="wheat">
+    <img src="static/corn.jpg" height=300cm width=400cm  alt="corn.jpg">
+    <img src="static/rice.jpg" height=300cm width=400cm  alt="rice.jpg">
+    {% for obj in objects %}
+        <div>
+            <li> {{ obj.name }} {{ obj.prize }} {{ obj.stock }} {{ obj.contact }}</li>
+        </div>
+    {% endfor %}
 </body>
 </html>

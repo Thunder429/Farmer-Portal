@@ -6,7 +6,7 @@ class farmer(models.Model):
     name = models.CharField(max_length=120)
     contact = models.CharField(max_length=10)
     email = models.EmailField()
-    address = models.TextField(max_length=120)
+    address = models.TextField(max_length=120, null=True)
     photo = models.FileField(null=True)
     password = models.CharField(max_length=20)
 
